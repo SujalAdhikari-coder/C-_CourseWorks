@@ -1,11 +1,10 @@
+//4.	Write a program that reads a number from the user and based on the user input.
 #include <iostream>
 using namespace std;
-
 int main() {
     int a;
     cout << "Enter the day of the week (1-7): ";
     cin >> a;
-
     switch (a) {
         case 1:
             cout << "Sunday" << endl;
@@ -31,6 +30,5 @@ int main() {
         default:
             cout << "Invalid day of the week!" << endl;
     }
-
     return 0;
 }
