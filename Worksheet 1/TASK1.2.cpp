@@ -2,20 +2,16 @@
 #include <iostream>
 #include <ctime>
 using namespace std;
-
 int main() {
     srand(time(0));
-
     int easy = rand() % 8 + 1;
     int medium = rand() % 30 + 1;
     int hard = rand() % 50 + 1;
     int guess;
     char difficulty;
-
     cout << "Welcome to the Number Guessing Game!" << endl;
     cout << "Choose your difficulty: Easy (e), Medium (m), Hard (h): ";
     cin >> difficulty;
-
     switch (difficulty) {
         case 'e': case 'E':  // Corrected syntax
             cout << "Guess a number between 1 and 8: ";
@@ -47,6 +43,5 @@ int main() {
         default:
             cout << "Invalid input! Please restart the game and choose a valid difficulty." << endl;
     }
-
     return 0;
 }
