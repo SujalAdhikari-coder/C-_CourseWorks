@@ -10,10 +10,10 @@ int main() {
     cin >> choice;
     if (choice == 'C' || choice == 'c') {
         double celsius = (temp - 32) * 5 / 9;
-        cout << "Temperature in Celsius: " << celsius << "°C" << endl;
+        cout << "Temperature in Celsius: " << celsius << "C" << endl;
     } else if (choice == 'F' || choice == 'f') {
         double fahrenheit = (temp * 9 / 5) + 32;
-        cout << "Temperature in Fahrenheit: " << fahrenheit << "°F" << endl;
+        cout << "Temperature in Fahrenheit: " << fahrenheit << "F" << endl;
     } else {
         cout << "Invalid choice! Please enter C or F." << endl;
     }
