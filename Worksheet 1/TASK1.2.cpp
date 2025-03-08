@@ -1,3 +1,4 @@
+//1.2-Write a C++ program to implement a number guessing game with different difficulty levels.
 #include <iostream>
 #include <ctime>  // For generating random numbers
 using namespace std;
