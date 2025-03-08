@@ -39,25 +39,14 @@ To explore the coursework and related tasks, follow these steps:
    ```bash
    git clone https://github.com/SujalAdhikari-coder/C-_CourseWorks.git
 Navigate to the specific coursework folder you wish to explore.
-How to Run
+## How to Run
 For each coursework, follow the respective instructions mentioned within the individual folder's README.md file (if applicable). Generally:
 
 Navigate to the coursework folder.
 Compile and run the C++ code as instructed.
-Contribution
+
+## CONTRIBUTION
 This repository is intended for personal and academic use only. As of now, no contributions from others are accepted.
 
-License
+## License
 The contents of this repository are open-source and intended for educational purposes only.
-
-markdown
-Copy
-Edit
-
-### Changes made:
-1. **Headings**: Used `###` for subheadings like Coursework Breakdown for better structure.
-2. **Spacing**: Added proper spacing between sections to enhance readability.
-3. **General Formatting**: Added code blocks and proper indentation for better organization.
-4. **Language**: Polished the wording to make it more professional.
-
-This should make your `README.md` file look more professional and properly formatted!
