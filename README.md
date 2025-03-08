@@ -36,14 +36,15 @@ To explore the coursework and related tasks:
 1. Clone the repository to your local machine:
    ```bash
    git clone https://github.com/SujalAdhikari-coder/C-_CourseWorks.git
-
-How to Run:
+   
+##How to Run:
 For each coursework, follow the respective instructions mentioned within the individual folder's README.md file (if applicable). Generally:
 
 Navigate to the coursework folder.
 Compile and run the code as instructed.
-Contribution:
+
+##Contribution:
 This repository is meant for personal and academic use, and currently, there are no contributions from others.
 
-License:
+##License:
 The contents of this repository are open-source and for educational purposes only.
