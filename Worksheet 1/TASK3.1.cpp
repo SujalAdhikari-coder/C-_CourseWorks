@@ -2,18 +2,18 @@
 #include <iostream>
 using namespace std;
 int main() {
-    char seats[5][5] = {
+    char seats[5][5] = {  // Initialize a 5x5 seating arrangement with 'O' (available seats)
         {'O', 'O', 'O', 'O', 'O'},
         {'O', 'O', 'O', 'O', 'O'},
         {'O', 'O', 'O', 'O', 'O'},
         {'O', 'O', 'O', 'O', 'O'},
         {'O', 'O', 'O', 'O', 'O'}
     };
-    while (true) {
+    while (true) { // Continuous loop for seat booking
         cout << "Cinema Seats:\n";
-        for (int row = 0; row < 5; row++) {
+        for (int row = 0; row < 5; row++) {  // Display the current seating arrangement
             for (int col = 0; col < 5; col++) {
-                cout << seats[row][col] << " ";
+                cout << seats[row][col] << " ";  // Print seat status ('O' for available, 'X' for booked)
             }
             cout << endl;
         }
@@ -24,26 +24,27 @@ int main() {
         int col;
         cin >> col;
         if (row == 0 && col == 0) {
-            cout << "Exiting\n";
+            cout << "Exiting...\n";
             break;
         }
-        if (row < 1 || row > 5 || col < 1 || col > 5) {
-            cout << "That's not a valid seat. Try again.\n";
+        if (row < 1 || row > 5 || col < 1 || col > 5) {  // Validate user input (Ensure row and column are within valid range)
+            cout << "Invalid seat selection! Please enter values between 1 and 5.\n";
             continue;
         }
+        // Convert to zero-based indexing
         row--;
         col--;
-        if (seats[row][col] == 'X') {
-            cout << "Sorry, that seat is taken. Try another.\n";
+        if (seats[row][col] == 'X') { // Check if the seat is already booked
+            cout << "Sorry, that seat is already taken. Try another.\n";
             continue;
         }
-        seats[row][col] = 'X';
-        cout << "Seat booked!\n";
+        seats[row][col] = 'X'; // Mark the seat as booked
+        cout << "Seat booked successfully!\n";
         char choice;
         cout << "Do you want to book more seats? (y/n): ";
         cin >> choice;
         if (choice == 'n' || choice == 'N') {
-            cout << "Exiting\n";
+            cout << "Exiting...\n";
             break;
         }
     }
