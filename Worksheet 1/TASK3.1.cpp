@@ -2,18 +2,18 @@
 #include <iostream>
 using namespace std;
 int main() {
-    char seats[5][5] = {  // Initialize a 5x5 seating arrangement with 'O' (available seats)
+    char seats[5][5] = {  // Initialize a 5x5 seating arrangement
         {'O', 'O', 'O', 'O', 'O'},
         {'O', 'O', 'O', 'O', 'O'},
         {'O', 'O', 'O', 'O', 'O'},
         {'O', 'O', 'O', 'O', 'O'},
         {'O', 'O', 'O', 'O', 'O'}
     };
-    while (true) { // Continuous loop for seat booking
+    while (true) { //loop for seat booking
         cout << "Cinema Seats:\n";
-        for (int row = 0; row < 5; row++) {  // Display the current seating arrangement
+        for (int row = 0; row < 5; row++) {  //Display the current seat
             for (int col = 0; col < 5; col++) {
-                cout << seats[row][col] << " ";  // Print seat status ('O' for available, 'X' for booked)
+                cout << seats[row][col] << " ";  //Print seat status
             }
             cout << endl;
         }
@@ -27,18 +27,18 @@ int main() {
             cout << "Exiting...\n";
             break;
         }
-        if (row < 1 || row > 5 || col < 1 || col > 5) {  // Validate user input (Ensure row and column are within valid range)
+        if (row < 1 || row > 5 || col < 1 || col > 5) {  //Ensure row and column are within valid range
             cout << "Invalid seat selection! Please enter values between 1 and 5.\n";
             continue;
         }
         // Convert to zero-based indexing
         row--;
         col--;
-        if (seats[row][col] == 'X') { // Check if the seat is already booked
+        if (seats[row][col] == 'X') { //Check if the seat is already booked
             cout << "Sorry, that seat is already taken. Try another.\n";
             continue;
         }
-        seats[row][col] = 'X'; // Mark the seat as booked
+        seats[row][col] = 'X'; //Mark the seat as booked
         cout << "Seat booked successfully!\n";
         char choice;
         cout << "Do you want to book more seats? (y/n): ";
