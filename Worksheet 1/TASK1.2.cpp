@@ -1,12 +1,12 @@
-//1.2-Write a C++ program to implement a number guessing game with different difficulty levels.
+//1.2-Write a program to implement a number guessing game with different difficulty levels.
 #include <iostream>
-#include <ctime>  // For generating random numbers
+#include <ctime>  //generate random numbers
 using namespace std;
 int main() {
-    srand(time(0));  // Seed the random number generator
-    int easy = rand() % 8 + 1;    // Random number between 1 and 8
-    int medium = rand() % 30 + 1; // Random number between 1 and 30
-    int hard = rand() % 50 + 1;   // Random number between 1 and 50
+    srand(time(0));  //random number generator
+    int easy = rand() % 8 + 1;    //Random number between 1 and 8
+    int medium = rand() % 30 + 1; //Random number between 1 and 30
+    int hard = rand() % 50 + 1;   //Random number between 1 and 50
     int guess;
     char difficulty;
     cout << "Welcome to the Number Guessing Game!" << endl;
