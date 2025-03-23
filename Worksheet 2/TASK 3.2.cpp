@@ -4,30 +4,30 @@
 //3.	Allows adding new records with proper validation
 //4.	Saves modified records back to file
 #include <iostream>
-#include <fstream>  // For file handling
-#include <stdexcept>  // For exception handling
+#include <fstream>  //For file handling
+#include <stdexcept>  //For exception handling
 #include <string>
-#include <vector>  // For storing records in memory
+#include <vector>  //For storing records in memory
 using namespace std;
-// Structure to store student data
+//Structure to store student data
 struct Student {
     int roll;
     string name;
     int marks;
 };
-// Function to validate marks
+//Function to validate marks
 void validateMarks(int marks) {
     if (marks < 0 || marks > 100) {
         throw out_of_range("Marks must be between 0 and 100.");
     }
 }
-// Function to read student records from a file
+//Function to read student records from a file
 vector<Student> readRecords(string fileName) {
     vector<Student> students;
     ifstream inFile(fileName);
     if (!inFile) {
         cout << "File doesn't exist. It will be created when saving new records.\n";
-        return students;  // Return empty list
+        return students;  //Return empty list
     }
     Student student;
     while (inFile >> student.roll >> student.name >> student.marks) {
@@ -36,7 +36,7 @@ vector<Student> readRecords(string fileName) {
     inFile.close();
     return students;
 }
-// Function to write student records back to the file
+//Function to write student records back to the file
 void saveRecords(string fileName, vector<Student> students) {
     ofstream outFile(fileName);
     if (!outFile) {
@@ -71,7 +71,7 @@ int main() {
         Student newStudent;
         cout << "Enter Roll: ";
         cin >> newStudent.roll;
-        cin.ignore();  // Ignore newline left by previous input
+        cin.ignore();  //Ignore newline left by previous input
         cout << "Enter Name: ";
         getline(cin, newStudent.name);
         cout << "Enter Marks: ";
@@ -84,7 +84,7 @@ int main() {
             cout << "Error: " << e.what() << endl;
         }
     } else if (choice == 2) {
-        // Modifying an existing student record
+        //Modifying an existing student record
         int rollNumber;
         cout << "Enter roll number to modify: ";
         cin >> rollNumber;
@@ -112,7 +112,7 @@ int main() {
     } else {
         cout << "Invalid choice.\n";
     }
-    // Save the modified records back to the file
+    //Save the modified records back to the file
     saveRecords(fileName, students);
     return 0;
 }
