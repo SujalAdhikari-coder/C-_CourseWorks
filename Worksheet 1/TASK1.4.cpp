@@ -5,7 +5,6 @@ int main() {
     int day;
     cout << "Enter the day of the week (1-7): ";
     cin >> day;
-    // Use switch-case to determine the corresponding day
     switch (day) {
         case 1:
             cout << "Sunday" << endl;
@@ -31,6 +30,5 @@ int main() {
         default:
             cout << "Invalid day of the week! Please enter a number between 1 and 7." << endl;
     }
-
     return 0;
 }
