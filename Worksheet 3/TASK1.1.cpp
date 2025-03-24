@@ -1,3 +1,8 @@
+/*1.	Create a Time class to store hours and minutes. Implement:
+1.	Overload the + operator to add two Time objects
+2.	Overload the > operator to compare two Time objects
+3.	Handle invalid time (>24 hours or >60 minutes) by throwing a custom exception
+*/
 #include <iostream>
 #include <stdexcept> //For exception handling
 using namespace std;
